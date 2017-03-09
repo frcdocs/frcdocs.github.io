@@ -1,5 +1,7 @@
 ---
 title: GradleRIO Setup
-category: Programming Setup
+categories:
+- Programming Setup
 order: 2
 ---
+

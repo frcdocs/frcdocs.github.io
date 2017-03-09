@@ -1,73 +1,61 @@
-# ----
-# Site
-
+---
 title: FRC Docs
-url: "https://frcdocs.github.io/"
-baseurl:
-google_analytics_key:
-show_full_navigation: true
-
-# Values for the jekyll-seo-tag gem (https://github.com/jekyll/jekyll-seo-tag)
-logo: /siteicon.png
-description: FRC Documentation Project
-author:
-  name:
-  email:
-  twitter: # twitter username without the @ symbol
-social:
-  name: frcdocs
-  links:
-    - https://github.com/frcdocs
-
-# -----
-# Build
-
-permalink: pretty
-
-gems:
-  - jekyll-sitemap
-  - jekyll-seo-tag
-  - jekyll-feed
-
-exclude:
-  - Gemfile
-  - Gemfile.lock
-  - README.md
-  - LICENSE
-
+timezone: UTC
 collections:
   docs:
     title: Documentation
-    permalink: /:path/
     output: true
-
+    permalink: "/:path/"
+  posts:
+    title: Posts
+    output: true
+  uploads:
+    title: Uploads
+    output: true
 defaults:
-  -
-    scope:
-      path: ""
-    values:
-      layout: default
-  -
-    scope:
-      path: ""
-      type: "docs"
-    values:
-      seo:
-        type: Article
-      _comments:
-        category: Group navigation links with this field
-        order: Used to sort links in the navigation
-  -
-    scope:
-      path: ""
-      type: "posts"
-    values:
-      _comments:
-        type: Marks the impact of this release
-
-# -----------
-# CloudCannon
-
+- scope:
+    path: ''
+  values:
+    layout: default
+- scope:
+    path: ''
+    type: docs
+  values:
+    seo:
+      type: Article
+    _comments:
+      category: Group navigation links with this field
+      order: Used to sort links in the navigation
+- scope:
+    path: ''
+    type: posts
+  values:
+    _comments:
+      type: Marks the impact of this release
+url: https://frcdocs.github.io/
+baseurl: 
+google_analytics_key: 
+show_full_navigation: true
+logo: "/siteicon.png"
+description: FRC Documentation Project
+author:
+  name: 
+  email: 
+  twitter: 
+social:
+  name: frcdocs
+  links:
+  - https://github.com/frcdocs
+permalink: pretty
+gems:
+- jekyll-sitemap
+- jekyll-seo-tag
+- jekyll-feed
+exclude:
+- Gemfile
+- Gemfile.lock
+- README.md
+- LICENSE
 types:
-  - minor
-  - major
+- minor
+- major
